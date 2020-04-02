@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+
+
+# openuri
+# fetch("http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7")
+#   .then(response => response.json())
+#   .then((data) => {
+#     console.log(data);
+#   });

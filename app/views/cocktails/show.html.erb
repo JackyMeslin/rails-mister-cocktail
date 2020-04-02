@@ -1,0 +1,15 @@
+<h1>Cocktails#show</h1>
+<!-- <p>Find me in app/views/cocktails/show.html.erb</p> -->
+
+<h2><%= @cocktail.name %></h2>
+
+<div><%= link_to 'cocktails', cocktails_path %></div>
+
+<h4>doses</h4>
+<% @cocktail.doses.each do |dose| %>
+<li class="list-group-item">
+<p><%= dose.content %></p>
+</li>
+<% end %>
+</ul>
+</div>

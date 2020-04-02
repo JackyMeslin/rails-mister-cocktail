@@ -4,7 +4,8 @@ class Dose < ApplicationRecord
   # each dose an ingredient
   belongs_to :ingredient
    # has a description
+  validates :description, presence: true
    # a cocktail and an ingredient
    # [cocktail, ingredient] pairings should be unique
-  validates :description, presence: true
+  validates :cocktail, uniqueness: { scope: :ingredient }
 end
