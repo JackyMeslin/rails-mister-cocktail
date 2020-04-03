@@ -1,5 +1,10 @@
-<h1>Mister Cocktail</h1>
-<p>Les meilleurs cocktails de l'Ouest</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container" text-color= "white">
+    <h1>Mister <strong>Cocktail</strong></h1>
+    <p>Les meilleurs cocktails de l'<strong>Ouest</strong></p>
+    <a class="btn btn-flat" href="#"><%= link_to 'créer un nouveau cocktail', new_cocktail_path, class: 'btn btn-primary' %></a>
+  </div>
+</div>
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li><%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
@@ -8,5 +13,5 @@
 <%#= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"%>
 
 <div>
-  <%= link_to 'créer un nouveau cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+
 </div>
