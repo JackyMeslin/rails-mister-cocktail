@@ -1,5 +1,5 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<h1>Mister Cocktail</h1>
+<p>Les meilleurs cocktails de l'Ouest</p>
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li><%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
@@ -8,5 +8,5 @@
 <%#= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"%>
 
 <div>
-  <%= link_to 'create', new_cocktail_path, class: 'btn btn-primary' %>
+  <%= link_to 'créer un nouveau cocktail', new_cocktail_path, class: 'btn btn-primary' %>
 </div>

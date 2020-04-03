@@ -76,10 +76,10 @@ test:
 # You can use this database configuration with:
 #
 #   production:
-#     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
   <<: *default
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
   database: rails_mister_cocktail_production
   username: rails_mister_cocktail
   password: <%= ENV['RAILS_MISTER_COCKTAIL_DATABASE_PASSWORD'] %>

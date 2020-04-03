@@ -5,11 +5,14 @@
 
 <div><%= link_to 'cocktails', cocktails_path %></div>
 
-<h4>doses</h4>
+<h4>Composition</h4>
 <% @cocktail.doses.each do |dose| %>
 <li class="list-group-item">
-<p><%= dose.content %></p>
+<p><%= dose.description %> <%= dose.ingredient.name %></p>
+<%= link_to 'Supprimer la dose', dose_path(dose), method: :delete %>
 </li>
 <% end %>
-</ul>
-</div>
+
+<div><%= link_to 'Ajouter une nouvelle dose', new_cocktail_dose_path(@cocktail) %></div>
+
+<div><%= link_to 'Supprimer le cocktail', cocktail_path(@cocktail), method: :delete %></div>
